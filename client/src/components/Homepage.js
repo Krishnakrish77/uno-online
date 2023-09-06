@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import randomCodeGenerator from '../utils/randomCodeGenerator'
+import Logo from '../assets/logo.png'
 
 const Homepage = () => {
     const [roomCode, setRoomCode] = useState('')
@@ -8,7 +9,7 @@ const Homepage = () => {
     return (
         <div className='Homepage'>
             <div className='homepage-menu'>
-                <img src={require('../assets/logo.png').default} width='200px' />
+                <img src={Logo} width='200px' alt='' />
                 <div className='homepage-form'>
                     <div className='homepage-join'>
                         <input type='text' placeholder='Game Code' onChange={(event) => setRoomCode(event.target.value)} />

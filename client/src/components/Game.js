@@ -1220,7 +1220,7 @@ const Game = (props) => {
             {(!roomFull) ? <>
 
                 <div className='topInfo'>
-                    <img src={require('../assets/logo.png').default} />
+                    <img src={require('../assets/logo.png')} alt="logo" />
                     <h1>Game Code: {room}</h1>
                     <span>
                         <button className='game-button green' onClick={() => setSoundMuted(!isSoundMuted)}>{isSoundMuted ? <span className="material-icons">volume_off</span> : <span className="material-icons">volume_up</span>}</button>
@@ -1252,6 +1252,7 @@ const Game = (props) => {
                                     className='Card'
                                     onClick={() => onCardPlayedHandler(item)}
                                     src={require(`../assets/card-back.png`).default}
+                                    alt="UNO card back"
                                     />
                             ))}
                             {turn==='Player 2' && <Spinner />}
@@ -1263,6 +1264,7 @@ const Game = (props) => {
                             <img
                                 className='Card'
                                 src={require(`../assets/cards-front/${playedCardsPile[playedCardsPile.length-1]}.png`).default}
+                                alt=""
                                 /> }
                             <button className='game-button orange' disabled={player1Deck.length !== 2} onClick={() => {
                                 setUnoButtonPressed(!isUnoButtonPressed)
@@ -1278,6 +1280,7 @@ const Game = (props) => {
                                     className='Card'
                                     onClick={() => onCardPlayedHandler(item)}
                                     src={require(`../assets/cards-front/${item}.png`).default}
+                                    alt=""
                                     />
                             ))}
                         </div>
@@ -1316,6 +1319,7 @@ const Game = (props) => {
                                     className='Card'
                                     onClick={() => onCardPlayedHandler(item)}
                                     src={require(`../assets/card-back.png`).default}
+                                    alt=""
                                     />
                             ))}
                             {turn==='Player 1' && <Spinner />}
@@ -1327,6 +1331,7 @@ const Game = (props) => {
                             <img
                                 className='Card'
                                 src={require(`../assets/cards-front/${playedCardsPile[playedCardsPile.length-1]}.png`).default}
+                                alt=""
                                 /> }
                             <button className='game-button orange' disabled={player2Deck.length !== 2} onClick={() => {
                                 setUnoButtonPressed(!isUnoButtonPressed)
@@ -1342,6 +1347,7 @@ const Game = (props) => {
                                     className='Card'
                                     onClick={() => onCardPlayedHandler(item)}
                                     src={require(`../assets/cards-front/${item}.png`).default}
+                                    alt=""
                                     />
                             ))}
                         </div>
